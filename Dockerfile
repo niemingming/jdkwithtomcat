@@ -1,18 +1,18 @@
 FROM ubuntu:16.04
-MAINTAINER ljm
+MAINTAINER nmm
 #安装JDK
 RUN mkdir -p /var/java
-RUN wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie"  -P /var/tmp/jdk http://download.oracle.com/otn-pub/java/jdk/8u161-b12/2f38c3b165be4555a1fa6e98c45e0808/jdk-8u161-linux-x64.tar.gz
-RUN tar xzf /var/tmp/jdk/jdk-8u161-linux-x64.tar.gz -C /var/java
-RUN rm -rf /var/tmp/jdk/jdk-8u161-linux-x64.tar.gz
+RUN wget -P /var/java http://download.oracle.com/otn-pub/java/jdk/8u161-b12/2f38c3b165be4555a1fa6e98c45e0808/jdk-8u161-linux-x64.tar.gz
+RUN tar xzf /var/java/jdk-8u161-linux-x64.tar.gz -C /var/java
+RUN rm -rf /var/java/jdk/jdk-8u161-linux-x64.tar.gz
 #本地已经下载了
 #ADD /var/java /var/java
 #安装maven
 RUN mkdir /var/tomcat
 #ADD /var/tomcat /var/tomcat
-RUN wget -P /var/tmp/tomcat http://apache.communilink.net/tomcat/tomcat-8/v8.0.50/bin/apache-tomcat-8.0.50.tar.gz
-RUN tar xzf /var/tmp/tomcat/apache-tomcat-8.0.50.tar.gz -C /var/tomcat
-RUN rm -rf /var/tmp/tomcat/apache-tomcat-8.0.50.tar.gz
+RUN wget -P /var/tomcat http://apache.communilink.net/tomcat/tomcat-8/v8.0.50/bin/apache-tomcat-8.0.50.tar.gz
+RUN tar xzf /var/tomcat/apache-tomcat-8.0.50.tar.gz -C /var/tomcat
+RUN rm -rf /var/tomcat/apache-tomcat-8.0.50.tar.gz
 
 #设置环境变量
 ENV JAVA_HOME /var/java/jdk1.8.0_161
