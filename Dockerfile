@@ -1,5 +1,6 @@
 FROM ubuntu:16.04
 MAINTAINER nmm
+RUN yum -y install wget
 #安装JDK
 RUN mkdir -p /var/java
 RUN wget -P /var/java http://download.oracle.com/otn-pub/java/jdk/8u161-b12/2f38c3b165be4555a1fa6e98c45e0808/jdk-8u161-linux-x64.tar.gz
