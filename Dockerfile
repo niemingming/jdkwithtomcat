@@ -22,5 +22,5 @@ ENV CATALINA_BASE /var/tomcat/apache-tomcat-8.0.50
 ENV PATH $PATH:$JAVA_HOME/bin:$CATALINA_HOME/bin:$CATALINA_HOME/lib
 
 EXPOSE 8080
-
+ 
 CMD ["./var/tomcat/apache-tomcat-8.0.50/bin/startup.sh"]
