@@ -6,7 +6,7 @@ MAINTAINER nmm
 #RUN tar xzf /var/java/jdk-8u161-linux-x64.tar.gz -C /var/java
 #RUN rm -rf /var/java/jdk/jdk-8u161-linux-x64.tar.gz
 #本地已经下载了
-ADD /mnt/sda1/java/jdk-8u161-linux-x64.tar.gz /var/java
+ADD /home/jdk-8u161-linux-x64.tar.gz /var/java
 #安装maven
 #RUN mkdir /var/tomcat
 ADD /mnt/sda1/tomcat/apache-tomcat-8.0.50.tar.gz /var/tomcat
