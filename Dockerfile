@@ -13,7 +13,8 @@ ADD apache-tomcat-8.0.50.tar.gz /var/tomcat
 #RUN wget -P /var/tomcat http://apache.communilink.net/tomcat/tomcat-8/v8.0.50/bin/apache-tomcat-8.0.50.tar.gz
 #RUN tar xzf /var/tomcat/apache-tomcat-8.0.50.tar.gz -C /var/tomcat
 #RUN rm -rf /var/tomcat/apache-tomcat-8.0.50.tar.gz
-
+#添加项目
+ADD collector /var/tomcat/apache-tomcat-8.0.50/webapps
 #设置环境变量
 ENV JAVA_HOME /var/java/jdk1.8.0_161
 ENV CATALINA_HOME /var/tomcat/apache-tomcat-8.0.50
