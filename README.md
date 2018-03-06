@@ -9,5 +9,5 @@ docker build DockerfilePath  -t tag
 #启动命令及一些参数追加
 docker run -d --name dads --add-host address:ip -p port:port tag
 
-#进入容器内
+#进入容器内   /var/agent/pinpoint-agent/pinpointagent.jar
 docker exec -it containerId /bin/bash
